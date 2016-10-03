@@ -57,7 +57,7 @@ var App = function (_React$Component) {
     _this.determinePrize = _this.determinePrize.bind(_this);
     document.body.addEventListener('touchstart', _this.handleClick.bind(_this));
     window.addEventListener('keypress', _this.handleClick.bind(_this));
-    window.addEventListener('mousedown', _this.resetGame.bind(_this));
+    //window.addEventListener('mousedown', _this.resetGame.bind(_this));
     return _this;
   }
 

@@ -1,6 +1,7 @@
 body {
     font-family: 'VT323', sans-serif;
     background: #FFFFFF;
+    font-size: 24px;
 }
 
 body:after {
@@ -15,6 +16,14 @@ body:after {
     padding-top: 39%;
     transform: translateY(-50%);
     box-sizing: border-box;
+}
+
+h1{
+    font-size: 100%;
+}
+
+h2{
+    font-size: 80%;
 }
 
 h1, h2{
