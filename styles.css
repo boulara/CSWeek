@@ -1,5 +1,5 @@
 body {
-    font-family: 'VT323', sans-serif;
+    font-family: "Arial Black", Gadget, sans-serif;
     background: #FFFFFF;
     font-size: 24px;
 }
@@ -39,7 +39,7 @@ h1, h2{
     left: 0;
     right: 0;
     pointer-events: none;
-    font-size: 3vw;
+    font-size: 90%;
     opacity: .5;
 }
 
