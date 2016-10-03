@@ -269,7 +269,7 @@ var Results = function (_React$Component3) {
     var _this3 = _possibleConstructorReturn(this, (Results.__proto__ || Object.getPrototypeOf(Results)).call(this));
 
     _this3.state = {
-      messages: ['Winner!!!', 'Candy!', 'Candy!', 'No Prize, Sorry']
+      messages: ['Winner!!!', 'No Prize, Sorry', 'No Prize, Sorry', 'No Prize, Sorry']
     };
     return _this3;
   }
