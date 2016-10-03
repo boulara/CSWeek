@@ -1,34 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 
-<html lang="en">
 <head>
-  <meta charset="utf-8">
 
-  <title>CS Week 2016</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="styles.css">
+    <title>Login Form</title>
 
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-<script src="https://unpkg.com/react@15.3.2/dist/react.min.js"></script>
-<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.min.js"></script>
+    <link rel="stylesheet" href="assets/demo.css">
+    <link rel="stylesheet" href="assets/form-login.css">
 
 </head>
 
-<body>
-
-
-    <div class="app"></div>
-        <h1>CS Week 2016 - Digital Game</h1>
-        <h2>#EnergyBringsUsTogether</h2>
-    <div class="helper">Press a key or tap on mobile </div>
 
 
 
-    <div id="content"></div>
+    <div class="main-content">
 
-<script src="script.js"></script>
+        <!-- You only need this form and the form-login.css -->
+
+        <form class="form-login" method="post" action="game.html">
+
+            <div class="form-log-in-with-email">
+
+                <div class="form-white-background">
+
+                    <div class="form-title-row">
+                        <h1>CS Week 2016 - Digital Game!</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email">
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit">Let's Play!</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </form>
+
+    </div>
+
 </body>
+
 </html>
