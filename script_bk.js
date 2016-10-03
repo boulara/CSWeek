@@ -23,7 +23,7 @@ var App = function (_React$Component) {
         value: 0,
         endValue: 0,
         speed: 200,
-        isRunning: true,
+        isRunning: false,
         key: Math.random(),
         direction: 'ltr'
       }, {
@@ -32,7 +32,7 @@ var App = function (_React$Component) {
         index: 1,
         endValue: 0,
         speed: 200,
-        isRunning: true,
+        isRunning: false,
         key: Math.random(),
         direction: 'rtl'
       }, {
@@ -41,7 +41,7 @@ var App = function (_React$Component) {
         index: 2,
         endValue: 0,
         speed: 200,
-        isRunning: true,
+        isRunning: false,
         key: Math.random(),
         direction: 'ltr'
       }],
@@ -57,6 +57,7 @@ var App = function (_React$Component) {
     _this.determinePrize = _this.determinePrize.bind(_this);
     document.body.addEventListener('touchstart', _this.handleClick.bind(_this));
     window.addEventListener('keypress', _this.handleClick.bind(_this));
+    //window.addEventListener('mousedown', _this.resetGame.bind(_this));
     return _this;
   }
 
@@ -81,9 +82,11 @@ var App = function (_React$Component) {
       //If the active section isn't a row
       if (this.state.activeRowIndex < this.state.rows.length) {
         var index = this.state.activeRowIndex + 1;
-        this.setState({ activeRowIndex: index });
+        this.setState({
+          activeRowIndex: index
+        });
       } else {
-        this.resetGame();
+        this.resetGame(); //UNCOMMENT THIS ROW
       }
     }
   }, {
@@ -104,7 +107,9 @@ var App = function (_React$Component) {
       });
 
       console.log(prize);
-      this.setState({ prize: prize });
+      this.setState({
+        prize: prize
+      });
     }
   }, {
     key: 'resetGame',
@@ -119,8 +124,12 @@ var App = function (_React$Component) {
       });
 
       //Set the state
-      this.setState({ rows: rows });
-      this.setState({ activeRowIndex: 0 });
+      this.setState({
+        rows: rows
+      });
+      this.setState({
+        activeRowIndex: 0
+      });
     }
   }, {
     key: 'setRotatingValue',
@@ -129,7 +138,9 @@ var App = function (_React$Component) {
       var row = rows[index];
       row.value = value;
       rows[index] = row;
-      this.setState({ rows: rows });
+      this.setState({
+        rows: rows
+      });
     }
   }, {
     key: 'setEndValue',
@@ -138,7 +149,9 @@ var App = function (_React$Component) {
       var row = rows[index];
       row.endValue = value;
       rows[index] = row;
-      this.setState({ rows: rows });
+      this.setState({
+        rows: rows
+      });
     }
   }, {
     key: 'cancelInterval',
@@ -147,7 +160,9 @@ var App = function (_React$Component) {
       var row = rows[index];
       row.isRunning = false;
       rows[index] = row;
-      this.setState({ rows: rows });
+      this.setState({
+        rows: rows
+      });
     }
   }, {
     key: 'render',
@@ -198,7 +213,9 @@ var Row = function (_React$Component2) {
 
     var _this2 = _possibleConstructorReturn(this, (Row.__proto__ || Object.getPrototypeOf(Row)).call(this));
 
-    _this2.state = { value: 0 };
+    _this2.state = {
+      value: 0
+    };
     _this2.counterIntervalFunction = _this2.counterIntervalFunction.bind(_this2);
     _this2.clearCounterInterval = _this2.clearCounterInterval.bind(_this2);
     return _this2;
@@ -208,18 +225,24 @@ var Row = function (_React$Component2) {
     key: 'componentWillMount',
     value: function componentWillMount() {
       var interval = setInterval(this.counterIntervalFunction, this.props.speed);
-      this.setState({ interval: interval });
+      this.setState({
+        interval: interval
+      });
     }
   }, {
     key: 'counterIntervalFunction',
     value: function counterIntervalFunction() {
       if (this.props.isRunning && this.props.direction === 'ltr') {
         var value = this.state.value < 2 ? this.state.value + 1 : 0;
-        this.setState({ value: value });
+        this.setState({
+          value: value
+        });
         this.props.setRotatingValue(this.props.index, this.state.value);
       } else if (this.props.isRunning && this.props.direction === 'rtl') {
         var value = this.state.value > 0 ? this.state.value - 1 : 2;
-        this.setState({ value: value });
+        this.setState({
+          value: value
+        });
         this.props.setRotatingValue(this.props.index, this.state.value);
       } else {
         this.clearCounterInterval();
@@ -269,7 +292,7 @@ var Results = function (_React$Component3) {
     var _this3 = _possibleConstructorReturn(this, (Results.__proto__ || Object.getPrototypeOf(Results)).call(this));
 
     _this3.state = {
-      messages: ['Winner!!!', 'Candy!', 'Candy!', 'No Prize, Sorry']
+      messages: ['Winner!', 'No Prize', 'No Prize', 'No Prize']
     };
     return _this3;
   }
