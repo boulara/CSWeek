@@ -1,66 +1,45 @@
-<!DOCTYPE html>
-<html manifest="manifest.appcache">
+<!doctype html>
 
+<html lang="en" manifest="manifest.appcache">
 <head>
-<!-- Google Tag Manager -->
+  <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PT3KJL');</script>
 <!-- End Google Tag Manager -->
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta charset="utf-8">
+  <meta http-equiv="Refresh" content="120">
 
-    <title>Login Form</title>
+  <title>CS Week 2016</title>
 
-    <link rel="stylesheet" href="assets/demo.css">
-    <link rel="stylesheet" href="assets/form-login.css">
+  <link rel="stylesheet" href="styles.css">
+
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+<script src="https://unpkg.com/react@15.3.2/dist/react.min.js"></script>
+<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.min.js"></script>
 
 </head>
 
-
 <body>
-    <!-- Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT3KJL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
-    <div class="main-content">
-
-        <!-- You only need this form and the form-login.css -->
-
-        <form class="form-login" method="get" action="game.html">
-
-            <div class="form-log-in-with-email">
-
-                <div class="form-white-background">
-
-                    <div class="form-title-row">
-                        <h1>CS Week 2016 - Digital Game!</h1>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>Email</span>
-                            <input type="email" name="email">
-                        </label>
-                    </div>
-                    <div class="form-row">
-                        <button type="submit">Let's Play!</button>
-                    </div>
-
-                </div>
-            </div>
+    <div class="app"></div>
+        <h1>CS Week 2016 - Digital Game</h1>
+        <h2>#EnergyBringsUsTogether</h2>
+    <div class="helper">Press the space bar or tap on mobile </br> </br> Match the Eversource logo for the chance to win a prize</div>
 
 
 
-        </form>
+    <div id="content"></div>
 
-    </div>
-
+<script src="script.js"></script>
 </body>
-
 </html>
